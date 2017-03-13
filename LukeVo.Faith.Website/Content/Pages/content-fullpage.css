@@ -1,0 +1,12 @@
+﻿body.content-fullpage header.header {
+  position: fixed;
+  z-index: 3; }
+
+body.content-fullpage .section {
+  background-size: cover;
+  background-position: center center; }
+
+body.content-fullpage .section-content {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px; }
+

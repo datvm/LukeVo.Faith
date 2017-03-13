@@ -8,11 +8,17 @@ namespace LukeVo.Faith.Website.Controllers
 {
     public class HomeController : Controller
     {
+
+        [HttpGet, Route(""), Route("Home")]
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            return this.View();
+        }
 
-            return View();
+        [HttpGet, Route("SoF"), Route("StatementOfFaith")]
+        public ActionResult StatementOfFaith()
+        {
+            return this.View();
         }
     }
 }

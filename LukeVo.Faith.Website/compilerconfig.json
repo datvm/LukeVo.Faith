@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Content/Pages/home.css",
+    "inputFile": "Content/Pages/home.scss"
+  },
+  {
+    "outputFile": "Content/Pages/content.css",
+    "inputFile": "Content/Pages/content.scss"
+  },
+  {
+    "outputFile": "Content/Pages/content-fullpage.css",
+    "inputFile": "Content/Pages/content-fullpage.scss"
+  },
+  {
+    "outputFile": "Content/Pages/sof.css",
+    "inputFile": "Content/Pages/sof.scss"
+  }
+]

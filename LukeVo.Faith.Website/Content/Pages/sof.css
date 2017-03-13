@@ -1,0 +1,36 @@
+﻿body.sof .toc {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 3; }
+  body.sof .toc ul.toc-list {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 45px; }
+    body.sof .toc ul.toc-list > li {
+      display: table-cell;
+      padding: 0 5px 0 5px;
+      vertical-align: middle; }
+      body.sof .toc ul.toc-list > li > a {
+        display: inline-block;
+        background: rgba(250, 250, 250, 0.75);
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        line-height: 40px;
+        transition: all .5s ease-out; }
+        body.sof .toc ul.toc-list > li > a:hover {
+          background: rgba(232, 232, 232, 0.75); }
+      body.sof .toc ul.toc-list > li.active > a {
+        background: #4285F4;
+        color: #e8e8e8; }
+
+@media (max-device-width: 800px), (max-device-height: 600px) {
+  body.sof .toc {
+    display: none; } }
+

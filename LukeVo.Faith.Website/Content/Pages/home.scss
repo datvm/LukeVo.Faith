@@ -1,0 +1,20 @@
+﻿body.home {
+   
+    color: white;
+    height: 100vh;
+
+    h1.slogan {
+        text-align: center;
+        position: fixed;
+        top: 25vh;
+        width: 100%;
+    }
+
+    footer.footer {
+        position: fixed;
+        bottom: 5px;
+        width: 100%;
+        text-align: right;
+        padding: 0 30px;
+    }
+}

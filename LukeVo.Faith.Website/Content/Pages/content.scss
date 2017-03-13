@@ -1,0 +1,19 @@
+﻿body.content {
+    padding-bottom: 60px;
+
+    .page-content {
+        background: white;
+        padding: 30px;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    a {
+        color: #0072c6;
+        text-decoration: none;
+
+        &:hover {
+            color: #3390b1;
+        }
+    }
+}
