@@ -251,6 +251,13 @@
             $(".page-content").fullpage({
                 onLeave: onLeave,
             });
+
+            window.setInterval(function () {
+                var rtTooltip = $(".rtTooltip");
+                if (rtTooltip.length) {
+                    rtTooltip.css("transform", $(".fullpage-wrapper").css("transform"));
+                }
+            }, 1000);
         });
 
     </script>

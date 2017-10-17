@@ -3,6 +3,10 @@
     this.ViewBag.BodyClass = "home";
 }
 
+@section Meta {
+    <meta property="og:image" content="@this.Url.Content("~/Images/homepage_screenshot.png", true)" />
+}
+
 @section Styles {
     <link rel="stylesheet" href="~/Content/Pages/home.min.css" />
 }
