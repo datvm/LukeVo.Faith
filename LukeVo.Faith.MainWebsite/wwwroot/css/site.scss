@@ -1,0 +1,34 @@
+﻿header.header {
+    padding: 15px 0;
+    text-shadow: 0 0 25rem argb(0,0,0,.5);
+
+    .logo {
+        text-transform: uppercase;
+        font-weight: lighter;
+
+        > a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .links {
+        width: 100%;
+        text-align: right;
+
+        > a {
+            display: inline-block;
+            padding: 0 1vw;
+            margin: 0 15px;
+            color: inherit;
+            font-size: .9rem;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (min-width : 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+}

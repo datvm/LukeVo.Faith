@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>@(this.ViewBag.Title)</title>
+
+    <environment include="Development">
+        <link async rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    </environment>
+    <environment exclude="Development">
+        <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    </environment>
+
+    <link async rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+    @this.RenderSection("Heads", required: false)
+</head>
+<body>
+    <header id="section-header" class="header">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <h2 class="logo">
+                    <a asp-controller="Home" asp-action="Index">
+                        LukeVo.Faith
+                    </a>
+                </h2>
+
+                <div class="links">
+                    <a asp-controller="Apps" asp-action="DailyBibleVerse">
+                        Daily Bible Verse
+                    </a>
+                    <a href="//dailybibleverse.lukevo.faith">
+                        Hymns
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="section-content" class="page-content">
+        @this.RenderBody()
+    </section>
+
+    <footer id="section-footer" class="footer"></footer>
+
+    <environment include="Development">
+        <script defer src="~/lib/jquery/dist/jquery.js"></script>
+        <script defer src="~/lib/jquery/dist/jquery.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script defer src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    </environment>
+
+    @this.RenderSection("Scripts", required: false)
+</body>
+</html>
