@@ -18,13 +18,23 @@
     @this.RenderSection("Heads", required: false)
 </head>
 <body>
-    <h1>Luke Vo Tools</h1>
 
-    <section id="section-content" class="page-content">
-        @this.RenderBody()
-    </section>
+    <div class="container">
+        <h1>
+            <a href="/">
+                Luke Vo Tools
+            </a>
+        </h1>
+        <hr />
 
-    <footer id="section-footer" class="footer"></footer>
+        <section id="section-content" class="page-content">
+            @this.RenderBody()
+        </section>
+    </div>
+
+    <footer id="section-footer" class="footer">
+
+    </footer>
 
     <environment include="Development">
         <script defer src="~/lib/jquery/dist/jquery.js"></script>

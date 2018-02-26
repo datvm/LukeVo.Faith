@@ -1,0 +1,53 @@
+﻿@page
+@model LukeVo.Faith.Tools.Pages.Tools.BigJsonFileModel
+
+@{
+    ViewData["Title"] = "Big Json File";
+}
+
+<h2>Open big JSON file</h2>
+
+<p>
+    This tools help parsing a JSON file in the browser memory (and not printing into a textbox/text editors...)
+    so you can process it within the browser's developer console.
+    <br />
+    After processing, you can also download the variable back into a text file.
+    <br />
+
+    <span class="text-warning">
+        NOTE: browser maximum memory for a page is probably 4GB, with the JSON string stored for processing,
+        I have been able to test a 512MB file.
+        <br />
+        Bigger than that, probably you should use a tool that runs on Windows or your OS.
+    </span>
+</p>
+
+<hr />
+
+<form>
+    <div class="form-group">
+        <label for="txt-file">Choose file:</label>
+        <input id="txt-file" class="form-control" type="file" accept=".json" />
+    </div>
+    <div class="form-group">
+        <label for="txt-name">Variable name:</label>
+        <input id="txt-name" class="form-control" type="text" value="obj" />
+
+        <small class="form-text text-muted">
+            After loading, the data value will be under this name (accessed by <code>window.variablename</code>).
+        </small>
+    </div>
+    <div class="form-group text-center">
+        <button type="button" id="btn-load" class="text-center btn btn-primary btn-lg">Load</button>
+        <button type="button" id="btn-download" class="text-center btn btn-primary btn-lg">Download</button>
+    </div>
+    <div class="form-group text-center">
+        <p class="form-text" id="lbl-status"></p>
+    </div>
+</form>
+
+<a id="lnk-download" class="d-none"></a>
+
+@section Scripts {
+    <script defer src="~/js/bigjson.js"></script>
+}
