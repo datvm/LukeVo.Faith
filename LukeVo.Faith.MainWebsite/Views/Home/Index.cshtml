@@ -1,3 +1,12 @@
-﻿@{
+﻿@model VotD
+
+@{
     this.ViewBag.Title = "LukeVo.Faith";
 }
+
+<div class="container">
+    <div class="votd h-100">
+        <p class="votd-text">@this.Html.Raw(this.Model.text)</p>
+    </div>
+
+</div>
